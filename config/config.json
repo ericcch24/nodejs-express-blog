@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "ericcch24",
-    "password": "zxc124040219",
-    "database": "ericcch24",
-    "host": "localhost",
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "use_env_variable": "CLEARDB_DATABASE_URL"
   }
