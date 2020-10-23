@@ -31,6 +31,28 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+var mysql = require('mysql');
+
+
+function disconnect_handler() {
+   let conn = mysql.createConnection(config);
+    conn.connect(err => {
+        (err) && setTimeout('disconnect_handler()', 2000);
+    });
+
+    conn.on('error', err => {
+        if (err.code === 'PROTOCOL_CONNECTION_LOST') {
+            // db error 重新連線
+            disconnect_handler();
+        } else {
+            throw err;
+        }
+    });
+    exports.conn = conn;
+}
+
+exports.disconnect_handler =  disconnect_handler;
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
