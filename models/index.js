@@ -31,6 +31,14 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
+
+module.exports = db;
+
+// 資料庫斷線時的處理
+
 var mysql = require('mysql');
 
 
@@ -52,8 +60,3 @@ function disconnect_handler() {
 }
 
 exports.disconnect_handler =  disconnect_handler;
-
-db.sequelize = sequelize;
-db.Sequelize = Sequelize;
-
-module.exports = db;

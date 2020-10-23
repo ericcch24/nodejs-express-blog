@@ -63,9 +63,9 @@ const blogController = {
         article: req.body.article
       })
     }).then(() => {
-      res.redirect('/')
+      res.redirect('back')
     }).catch(() => {
-      res.redirect('/')
+      res.redirect('back')
     })
   },
 
