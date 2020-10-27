@@ -20,15 +20,15 @@ const blogController = {
     res.render('article')
   },
   handlePost: (req, res, next) => {
-    const {username, adminId} = req.session
-    const {topic, article} = req.body
+    const { username, adminId } = req.session
+    const { topic, article } = req.body
     if (!article || !topic) {
       req.flash('errorMessage', '請輸入文章標題與內容')
-      return next() 
+      return next()
     }
     if (!username || !adminId) {
       req.flash('errorMessage', '請登入後繼續')
-      return next() 
+      return next()
     }
     Blog.create({
       username,

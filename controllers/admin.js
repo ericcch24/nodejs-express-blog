@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const { sequelize } = require('../models/index')
 const db = require('../models')
 const Admin = db.Admin
@@ -10,8 +10,8 @@ const adminController = {
   },
 
   handleLogin: (req, res, next) => {
-    const {username, password} = req.body
-    if(!username || !password) {
+    const { username, password } = req.body
+    if (!username || !password) {
       req.flash('errorMessage', '你有東西沒填')
       return next()
     }
@@ -21,7 +21,7 @@ const adminController = {
         username
       }
     }).then(admin => {
-      if(!admin) {
+      if (!admin) {
         req.flash('errorMessage', '帳號不存在')
         return next()
       }
@@ -54,6 +54,4 @@ const adminController = {
     })
   }
 }
-
-
 module.exports = adminController
