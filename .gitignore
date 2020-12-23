@@ -1,6 +1,6 @@
 node_modules/
 .eslintrc.js/
-config/
+/config
 
 .DS_Store
 google0d047f43c0df4e24.html
