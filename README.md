@@ -59,4 +59,4 @@
 - Express: 搭配簡易的 MVC 架構實作部落格。
 - Sequelize: 進行資料庫的關聯與操作。
 - EJS: 部落格個分頁皆使用 EJS 模板引擎。
-- 專案部署於 Heroku 主機
+- 專案部署於 Heroku 主機。
