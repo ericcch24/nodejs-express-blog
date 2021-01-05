@@ -3,7 +3,9 @@
 使用 Node.js + Express 框架實作的部落格，具備文章 CRUD 功能與登入機制，部署於 Heroku 主機。
 
 [部落格連結](https://desolate-reef-15547.herokuapp.com/)
-帳號：admin 密碼：1234
+帳號：`admin` 密碼：`1234`
+
+註：由於專案部屬於 Heroku，開啟頁面後需要稍等待主機喚醒後才會顯示。
 
 ![](https://i.imgur.com/UsywQQZ.png)
 
